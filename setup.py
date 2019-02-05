@@ -9,12 +9,7 @@ HERE = abspath(dirname(__file__))
 readme = open(join(HERE, 'README.rst')).read()
 
 package_file = open(join(HERE, 'bunch/__init__.py'), 'rU')
-__version__ = re.sub(
-    r".*\b__version__\s+=\s+'([^']+)'.*",
-    r'\1',
-    [ line.strip() for line in package_file if '__version__' in line ].pop(0)
-)
-
+__version__ = '1.1'
 
 setup(
     name             = "bunch",
@@ -22,12 +17,12 @@ setup(
     description      = "A dot-accessible dictionary (a la JavaScript objects)",
     long_description = readme,
     url              = "http://github.com/dsc/bunch",
-    
+
     author           = "David Schoonover",
     author_email     = "dsc@less.ly",
-    
+
     packages         = ['bunch',],
-    
+
     keywords         = ['bunch', 'dict', 'mapping', 'container', 'collection'],
     classifiers      = [
         'Development Status :: 5 - Production/Stable',
