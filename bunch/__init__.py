@@ -249,7 +249,7 @@ def bunchify(x):
         nb. As dicts are not hashable, they cannot be nested in sets/frozensets.
     """
     if isinstance(x, dict):
-        return Bunch( (k, bunchify(v)) for k,v in iteritems(x) )
+        return Bunch( (k, bunchify(v)) for k,v in x.items() )
     elif isinstance(x, (list, tuple)):
         return type(x)( bunchify(v) for v in x )
     else:
@@ -274,7 +274,7 @@ def unbunchify(x):
         nb. As dicts are not hashable, they cannot be nested in sets/frozensets.
     """
     if isinstance(x, dict):
-        return dict( (k, unbunchify(v)) for k,v in iteritems(x) )
+        return dict( (k, unbunchify(v)) for k,v in x.items() )
     elif isinstance(x, (list, tuple)):
         return type(x)( unbunchify(v) for v in x )
     else:
