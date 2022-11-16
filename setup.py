@@ -8,7 +8,7 @@ from setuptools import setup
 HERE = abspath(dirname(__file__))
 readme = open(join(HERE, 'README.rst')).read()
 
-package_file = open(join(HERE, 'bunch/__init__.py'), 'rU')
+package_file = open(join(HERE, 'bunch/__init__.py'), 'r')
 __version__ = '1.1'
 
 setup(
