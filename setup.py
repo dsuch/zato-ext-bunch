@@ -12,7 +12,7 @@ package_file = open(join(HERE, 'bunch/__init__.py'), 'r')
 __version__ = '1.2'
 
 setup(
-    name             = "bunch",
+    name             = "zato-ext-bunch",
     version          = __version__,
     description      = "A dot-accessible dictionary (a la JavaScript objects)",
     long_description = readme,
